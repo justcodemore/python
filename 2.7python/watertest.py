@@ -23,12 +23,15 @@ def calculate(testcase):
             p_r -= 1
             if testcase[p_r] >= max_r:
                 max_r = testcase[p_r]
+                list_r.append(volume)
+                volume = 0
             else:
                 volume = volume + (max_r - testcase[p_r])
     list_r.sort()
+    print list_r
     return list_r[-1]
 
 
-case = [2, 5, 1, 6, 1, 2, 1, 7, 7, 6]
+case = [2, 5, 1, 6, 1, 2, 1, 7, 5, 6]
 l = calculate(case)
 print l
